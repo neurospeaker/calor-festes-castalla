@@ -375,6 +375,12 @@ h3 {
   color: var(--bg);
 }
 
+.button-secondary {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+}
+
 .hero-visual {
   position: relative;
   min-height: 500px;
@@ -1522,6 +1528,13 @@ h3 {
   color: var(--muted);
 }
 
+.downloads-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 .download-groups {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
@@ -1649,6 +1662,11 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+footer a {
+  color: var(--text);
+  font-weight: 750;
 }
 
 .noscript {

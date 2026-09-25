@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnerabilitat de seguretat / Security vulnerability
+    url: https://github.com/neurospeaker/calor-festes-castalla/security/advisories/new
+    about: Comunica vulnerabilitats en privat; no publiques detalls sensibles en una issue.
+  - name: Web interactiva
+    url: https://neurospeaker.github.io/calor-festes-castalla/
+    about: Consulta la versió pública més recent del projecte.
+

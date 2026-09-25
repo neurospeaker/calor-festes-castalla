@@ -3,11 +3,18 @@ const state = {
   projectionMode: "all",
   scenario: "SSP2-4.5",
   year: 2023,
+  quizCompleted: false,
 };
 
 let climateData = null;
 
 const numberFormatters = new Map();
+
+function trackEvent(name, data = {}) {
+  if (window.umami && typeof window.umami.track === "function") {
+    window.umami.track(name, data);
+  }
+}
 
 function number(value, digits = 1) {
   if (!numberFormatters.has(digits)) {
@@ -99,6 +106,10 @@ function setupQuiz() {
       };
       kicker.textContent = messages[option.dataset.guess];
       answer.hidden = false;
+      if (!state.quizCompleted) {
+        trackEvent("quiz-completed", { answer: option.dataset.guess });
+        state.quizCompleted = true;
+      }
     });
   });
 }
@@ -115,11 +126,13 @@ function setupModeControls() {
         });
         if (target === "historical") {
           state.historicalMode = button.dataset.mode;
+          trackEvent("historical-mode", { mode: state.historicalMode });
           renderHistorical();
           renderConsistency();
           renderThresholds();
         } else {
           state.projectionMode = button.dataset.mode;
+          trackEvent("projection-mode", { mode: state.projectionMode });
           renderProjection();
         }
       });
@@ -134,6 +147,7 @@ function setupScenarioPicker() {
         candidate.classList.toggle("active", candidate === button);
       });
       state.scenario = button.dataset.scenario;
+      trackEvent("scenario-select", { scenario: state.scenario });
       renderProjection();
     });
   });
@@ -242,6 +256,7 @@ function renderConsistency() {
     .join("");
   select.onchange = () => {
     state.year = Number(select.value);
+    trackEvent("year-select", { year: state.year });
     renderConsistency();
   };
 
@@ -440,15 +455,25 @@ function setupShare() {
       if (navigator.share) {
         await navigator.share(shareData);
         status.textContent = "Gràcies per compartir-ho.";
+        trackEvent("share", { method: "native" });
       } else {
         await navigator.clipboard.writeText(window.location.href);
         status.textContent = "Enllaç copiat.";
+        trackEvent("share", { method: "clipboard" });
       }
     } catch (error) {
       if (error.name !== "AbortError") {
         status.textContent = "No s’ha pogut compartir automàticament. Pots copiar l’adreça del navegador.";
       }
     }
+  });
+}
+
+function setupDownloadTracking() {
+  document.querySelectorAll("[data-download]").forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent("download", { file: link.dataset.download });
+    });
   });
 }
 
@@ -466,6 +491,7 @@ async function init() {
   setupModeControls();
   setupScenarioPicker();
   setupShare();
+  setupDownloadTracking();
   try {
     const response = await fetch("data.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);

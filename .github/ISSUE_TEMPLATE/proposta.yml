@@ -1,0 +1,32 @@
+name: Proposta de millora
+description: Proposa una funcionalitat, una visualització o una millora documental.
+title: "[Proposta]: "
+labels: ["enhancement", "needs-review"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Quina necessitat resoldria?
+      placeholder: Explica el problema o la pregunta que la proposta ajudaria a resoldre.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      placeholder: Descriu la millora i, si és possible, com la implementaries.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Referències o exemples
+      description: Afig fonts si la proposta afecta dades, metodologia o interpretació.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmació
+      options:
+        - label: He comprovat que no hi ha una issue oberta sobre la mateixa proposta.
+          required: true
+

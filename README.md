@@ -7,9 +7,19 @@ Anàlisi climàtica de dos possibles calendaris de les Festes de Moros i Cristia
 
 La pregunta és concreta: **quanta diferència de calor hi ha, de mitjana, entre els dos calendaris?** El projecte combina una comparació històrica de 1950–2025 amb projeccions climàtiques fins a 2100.
 
+**[Obri la web interactiva](https://neurospeaker.github.io/calor-festes-castalla/)** · **[Descarrega tot el projecte (.zip)](https://github.com/neurospeaker/calor-festes-castalla/archive/refs/heads/main.zip)** · **[Consulta la versió estable](https://github.com/neurospeaker/calor-festes-castalla/releases/latest)** · **[Proposa una millora](https://github.com/neurospeaker/calor-festes-castalla/issues/new/choose)**
+
 ## Web interactiva
 
 Consulta els resultats, els gràfics i la metodologia en la [web pública del projecte](https://neurospeaker.github.io/calor-festes-castalla/).
+
+No cal instal·lar res: la web funciona directament en qualsevol navegador modern. Per a una còpia local, descarrega el repositori i obri `index.html` mitjançant un servidor web local, per exemple:
+
+```bash
+python3 -m http.server 8000
+```
+
+Després visita `http://localhost:8000`.
 
 ## Resultats principals
 
@@ -45,6 +55,8 @@ Els llibres d’Excel es publiquen amb noms estables, numerats i sense sufixos a
 
 Els textos preparats per a difusió estan en [difusio/Textos_publicacio_Castalla.md](difusio/Textos_publicacio_Castalla.md).
 
+Per a descarregar els set Excel i la resta del projecte en un únic paquet, usa **[Descarrega tot el projecte (.zip)](https://github.com/neurospeaker/calor-festes-castalla/archive/refs/heads/main.zip)**. Les versions estables i les seues notes estan en [Releases](https://github.com/neurospeaker/calor-festes-castalla/releases).
+
 ## Metodologia resumida
 
 - **Disseny:** comparació emparellada dins de cada any mitjançant la diferència B − A.
@@ -76,9 +88,19 @@ Anàlisi plantejada, dirigida i interpretada per Lorenzo Díaz Mataix. S’han u
 
 GitHub també mostra una opció de citació automàtica a partir del fitxer [`CITATION.cff`](CITATION.cff).
 
-## Reutilització
+## Contribuir
 
-Els conjunts de dades d’origen conserven les seues condicions d’ús i atribució. Qualsevol reutilització dels resultats ha d’identificar este projecte i citar també els proveïdors de dades corresponents. No s’ha incorporat una llicència general al repositori per evitar atribuir als materials d’origen unes condicions diferents de les seues.
+Qualsevol persona pot comunicar una errada, proposar una millora o enviar una *pull request*. La branca `main` està protegida i els canvis han de ser revisats abans de publicar-se.
+
+- [Obri una issue amb la plantilla adequada](https://github.com/neurospeaker/calor-festes-castalla/issues/new/choose).
+- Llig la [guia de contribució](CONTRIBUTING.md) abans d’enviar codi, dades o documentació.
+- Comunica les vulnerabilitats en privat seguint la [política de seguretat](SECURITY.md).
+- Consulta la [informació de privacitat i estadístiques d’ús](PRIVACY.md).
+- Consulta el [registre de canvis](CHANGELOG.md) per veure l’evolució del projecte.
+
+## Llicències i reutilització
+
+El codi original es publica amb llicència MIT i els textos i visualitzacions originals amb CC BY 4.0. Les dades i els resultats derivats conserven les condicions dels seus proveïdors i no queden relicenciats. Consulta [LICENSE.md](LICENSE.md) per conéixer l’abast exacte i l’atribució recomanada.
 
 ---
 
