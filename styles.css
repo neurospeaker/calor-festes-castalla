@@ -1496,6 +1496,28 @@ h3 {
   color: var(--text);
 }
 
+.authorship {
+  margin-top: 30px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: linear-gradient(135deg, rgba(73, 185, 255, 0.08), rgba(255, 104, 70, 0.06));
+}
+
+.authorship .eyebrow {
+  margin-bottom: 8px;
+}
+
+.authorship h3 {
+  margin: 0 0 8px;
+}
+
+.authorship p:last-child {
+  max-width: 900px;
+  margin: 0;
+  color: var(--muted);
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
