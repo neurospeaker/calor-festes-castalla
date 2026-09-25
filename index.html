@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ca-valencia">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08111f" />
+    <meta
+      name="description"
+      content="Una comparació interactiva de la calor a les Festes de Castalla: últim divendres d’agost o de l’1 al 4 de setembre."
+    />
+    <meta property="og:title" content="La calor de les Festes de Castalla" />
+    <meta
+      property="og:description"
+      content="Quatre dies de calendari poden canviar la calor de les Festes? Descobrix les dades de 1950–2025 i les projeccions fins a 2100."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308111f'/%3E%3Cpath d='M14 18h36v32H14z' fill='none' stroke='%23f7fbff' stroke-width='4'/%3E%3Cpath d='M14 28h36' stroke='%23f7fbff' stroke-width='4'/%3E%3Ccircle cx='25' cy='39' r='5' fill='%2349b9ff'/%3E%3Ccircle cx='40' cy='39' r='5' fill='%23ff6846'/%3E%3C/svg%3E"
+    />
+    <title>La calor de les Festes de Castalla</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contingut">Ves directament al contingut</a>
+
+    <header class="site-header" aria-label="Navegació principal">
+      <a class="brand" href="#repte" aria-label="Inici">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>La calor de les Festes</span>
+      </a>
+      <nav class="section-nav" aria-label="Seccions">
+        <a href="#historia">1950–2025</a>
+        <a href="#futur">2027–2100</a>
+        <a href="#metode">Mètode</a>
+      </nav>
+    </header>
+
+    <main id="contingut">
+      <section class="hero section" id="repte" aria-labelledby="hero-title">
+        <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Festes de Moros i Cristians · Castalla</p>
+          <h1 id="hero-title">
+            Saps quina calor hauríem passat si les Festes hagueren començat sempre
+            <em>l’últim divendres d’agost?</em>
+          </h1>
+          <p class="hero-intro">
+            Ho hem comprovat any a any, de 1950 a 2025. Abans de mirar les dades,
+            fes la teua aposta.
+          </p>
+
+          <div class="quiz" aria-labelledby="quiz-title">
+            <h2 id="quiz-title">Quin període creus que va ser més calorós?</h2>
+            <div class="quiz-options" role="group" aria-label="Tria una resposta">
+              <button class="quiz-option" data-guess="b" type="button">
+                <span class="choice-letter">B</span>
+                <span>Més calor a finals d’agost</span>
+              </button>
+              <button class="quiz-option" data-guess="same" type="button">
+                <span class="choice-letter">≈</span>
+                <span>Pràcticament igual</span>
+              </button>
+              <button class="quiz-option" data-guess="a" type="button">
+                <span class="choice-letter">A</span>
+                <span>Més calor de l’1 al 4 de setembre</span>
+              </button>
+            </div>
+            <div class="quiz-answer" id="quiz-answer" hidden aria-live="polite">
+              <p class="answer-kicker" id="answer-kicker"></p>
+              <p class="answer-main">
+                En la mitjana dels 76 anys, el període B va ser més calorós en les
+                <strong>quatre variables</strong> analitzades.
+              </p>
+              <div class="answer-numbers">
+                <div>
+                  <span class="answer-value">+0,72 °C</span>
+                  <span>temperatura mitjana · tots els anys</span>
+                </div>
+                <div>
+                  <span class="answer-value">+1,24 °C</span>
+                  <span>temperatura mitjana · sense dies coincidents</span>
+                </div>
+              </div>
+              <a class="button button-primary" href="#comparacio">Vull veure com s’ha calculat</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="heat-ring heat-ring-1"></div>
+          <div class="heat-ring heat-ring-2"></div>
+          <div class="hero-a">A</div>
+          <div class="hero-b">B</div>
+          <div class="degree degree-1">24°</div>
+          <div class="degree degree-2">31°</div>
+          <div class="degree degree-3">17°</div>
+          <div class="degree degree-4">23°</div>
+        </div>
+      </section>
+
+      <section class="section compare-section" id="comparacio" aria-labelledby="compare-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Primer: què comparem?</p>
+          <h2 id="compare-title">Dos calendaris possibles per a les mateixes Festes</h2>
+          <p>
+            En cada any comparem dos intervals de quatre dies. La unitat de l’anàlisi
+            és sempre el mateix any: A i B formen una parella.
+          </p>
+        </div>
+
+        <div class="calendar-comparison">
+          <article class="calendar-card calendar-a">
+            <div class="calendar-label"><span>A</span> Dates fixes</div>
+            <h3>De l’1 al 4 de setembre</h3>
+            <div class="date-row" aria-label="1, 2, 3 i 4 de setembre">
+              <span><b>1</b><small>set.</small></span>
+              <span><b>2</b><small>set.</small></span>
+              <span><b>3</b><small>set.</small></span>
+              <span><b>4</b><small>set.</small></span>
+            </div>
+          </article>
+
+          <div class="versus" aria-hidden="true">VS</div>
+
+          <article class="calendar-card calendar-b">
+            <div class="calendar-label"><span>B</span> Dates mòbils</div>
+            <h3>Últim divendres d’agost + 3 dies</h3>
+            <div class="date-row weekday-row" aria-label="Divendres, dissabte, diumenge i dilluns">
+              <span><b>DV</b><small>agost</small></span>
+              <span><b>DS</b><small>+1</small></span>
+              <span><b>DG</b><small>+2</small></span>
+              <span><b>DL</b><small>+3</small></span>
+            </div>
+          </article>
+        </div>
+
+        <div class="plain-note">
+          <strong>Per què fem una segona anàlisi?</strong>
+          En 33 dels 76 anys, A i B compartixen entre un i tres dies. Repetir dies
+          aproxima mecànicament els resultats. Per això també estudiem, per separat,
+          els 43 anys en què els huit dies comparats són diferents.
+        </div>
+      </section>
+
+      <section class="section data-section" id="historia" aria-labelledby="history-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">El que va passar · 1950–2025</p>
+            <h2 id="history-title">Quatre maneres de notar la calor</h2>
+          </div>
+          <div class="mode-control" data-mode-control="historical" role="group" aria-label="Mostra històrica">
+            <button class="mode-button active" type="button" data-mode="all" aria-pressed="true">
+              Tots els anys
+              <small>76</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="noOverlap" aria-pressed="false">
+              Sense cap dia coincident
+              <small>43</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="mode-explainer" id="history-mode-explainer" aria-live="polite"></div>
+        <div class="metric-grid" id="historical-metrics" aria-live="polite"></div>
+
+        <div class="result-callout" id="historical-callout">
+          <p class="result-label">Resultat principal</p>
+          <p id="historical-callout-text"></p>
+        </div>
+      </section>
+
+      <section class="section consistency-section" id="anys" aria-labelledby="years-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Any per any</p>
+          <h2 id="years-title">Una mitjana no vol dir que B guanyara sempre</h2>
+          <p id="consistency-copy"></p>
+        </div>
+
+        <div class="year-ribbon-wrap">
+          <div class="ribbon-legend" aria-hidden="true">
+            <span><i class="legend-a"></i>A més calorós</span>
+            <span><i class="legend-neutral"></i>Diferència mínima</span>
+            <span><i class="legend-b"></i>B més calorós</span>
+          </div>
+          <div class="year-ribbon" id="year-ribbon" aria-label="Diferència de temperatura mitjana any per any"></div>
+        </div>
+
+        <div class="year-explorer" id="year-explorer">
+          <div class="year-explorer-head">
+            <div>
+              <p class="eyebrow">Busca un any que recordes</p>
+              <h3>Compara una edició concreta</h3>
+            </div>
+            <label class="year-select-label">
+              <span>Any</span>
+              <select id="year-select" aria-label="Selecciona un any"></select>
+            </label>
+          </div>
+
+          <div class="selected-year-summary" id="selected-year-summary" aria-live="polite"></div>
+          <div class="selected-year-metrics" id="selected-year-metrics"></div>
+          <div class="daily-comparison" id="daily-comparison"></div>
+        </div>
+      </section>
+
+      <section class="section threshold-section" id="llindars" aria-labelledby="threshold-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Quan la màxima puja de veritat</p>
+          <h2 id="threshold-title">Probabilitat que almenys un dels quatre dies supere…</h2>
+          <p>
+            No és la probabilitat d’un dia qualsevol. És el percentatge d’anys en què
+            almenys una jornada del període de quatre dies va superar el llindar.
+          </p>
+        </div>
+        <div class="threshold-grid" id="threshold-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section future-section" id="futur" aria-labelledby="future-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">El que projecten els models · 2027–2100</p>
+            <h2 id="future-title">La diferència es manté en el futur?</h2>
+            <p>
+              Onze models climàtics, quatre escenaris d’emissions i una referència
+              comuna: el clima de 1991–2020.
+            </p>
+          </div>
+          <div class="mode-control" data-mode-control="projection" role="group" aria-label="Mostra de projecció">
+            <button class="mode-button active" type="button" data-mode="all" aria-pressed="true">
+              Tots els anys
+              <small>74</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="noOverlap" aria-pressed="false">
+              Sense cap dia coincident
+              <small>42</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="scenario-picker" role="group" aria-label="Escenari climàtic">
+          <button type="button" data-scenario="SSP1-2.6">
+            <span>SSP1-2.6</span><small>Mitigació forta</small>
+          </button>
+          <button class="active" type="button" data-scenario="SSP2-4.5">
+            <span>SSP2-4.5</span><small>Intermedi</small>
+          </button>
+          <button type="button" data-scenario="SSP3-7.0">
+            <span>SSP3-7.0</span><small>Emissions altes</small>
+          </button>
+          <button type="button" data-scenario="SSP5-8.5">
+            <span>SSP5-8.5</span><small>Molt altes</small>
+          </button>
+        </div>
+
+        <div class="future-summary" id="future-summary" aria-live="polite"></div>
+
+        <div class="future-two-column">
+          <article class="model-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">11 models, 11 punts</p>
+                <h3>Diferència de temperatura mitjana B − A</h3>
+              </div>
+              <p class="model-median" id="model-median"></p>
+            </div>
+            <div class="model-dot-chart" id="model-dot-chart"></div>
+            <div class="model-axis" aria-hidden="true">
+              <span>−0,5 °C</span><span>0</span><span>+1 °C</span><span>+2 °C</span>
+            </div>
+          </article>
+
+          <article class="extreme-panel">
+            <p class="eyebrow">Almenys un dia per damunt de 35 °C</p>
+            <h3 id="extreme-title">El risc també és major en B</h3>
+            <div class="extreme-bars" id="extreme-bars"></div>
+            <p class="fine-print">Mediana dels 11 models per al conjunt de 2027–2100.</p>
+          </article>
+        </div>
+
+        <div class="window-grid" id="future-windows"></div>
+
+        <div class="plain-note future-note" id="future-conclusion"></div>
+        <p class="method-note">
+          La temperatura aparent no es projecta perquè els fitxers climàtics diaris
+          utilitzats aporten temperatura mitjana, màxima i mínima, però no totes les
+          variables necessàries per a calcular-la de manera comparable.
+        </p>
+      </section>
+
+      <section class="section conclusion-section" id="conclusio" aria-labelledby="conclusion-title">
+        <div class="conclusion-shell">
+          <p class="eyebrow">La resposta curta</p>
+          <h2 id="conclusion-title">Sí: començar abans hauria implicat, de mitjana, més calor.</h2>
+          <div class="conclusion-grid">
+            <article>
+              <span class="conclusion-number">4 de 4</span>
+              <h3>Variables històriques</h3>
+              <p>
+                Mitjana, màxima diürna, mínima nocturna i temperatura aparent van ser
+                significativament superiors en B.
+              </p>
+            </article>
+            <article>
+              <span class="conclusion-number">+1,24 °C</span>
+              <h3>Sense dies compartits</h3>
+              <p>
+                La diferència de temperatura mitjana augmenta quan comparem huit dies
+                completament diferents.
+              </p>
+            </article>
+            <article>
+              <span class="conclusion-number">11 models</span>
+              <h3>La diferència persistix</h3>
+              <p>
+                Les medianes dels quatre escenaris mantenen B més calorós fins a 2100.
+                Els dos períodes, a més, es calfen.
+              </p>
+            </article>
+          </div>
+          <p class="conclusion-caveat">
+            Açò descriu una diferència mitjana entre dos calendaris. No significa que B
+            fora més calorós tots els anys ni permet predir el temps d’una edició concreta.
+          </p>
+          <button class="button button-share" id="share-button" type="button">Compartix l’anàlisi</button>
+          <p class="share-status" id="share-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section methods-section" id="metode" aria-labelledby="methods-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Com s’ha fet</p>
+          <h2 id="methods-title">Metodologia i límits de l’anàlisi</h2>
+          <p>
+            La versió breu: comparem A i B dins del mateix any, mesurem la diferència
+            B − A i comprovem si el patró és prou consistent per a no atribuir-lo només
+            a la variabilitat meteorològica.
+          </p>
+        </div>
+
+        <div class="method-facts" aria-label="Resum metodològic">
+          <div><strong>76</strong><span>anys històrics</span></div>
+          <div><strong>43</strong><span>sense dies coincidents</span></div>
+          <div><strong>11</strong><span>models climàtics</span></div>
+          <div><strong>4</strong><span>escenaris SSP</span></div>
+        </div>
+
+        <div class="method-accordions">
+          <details open>
+            <summary>Dades històriques i variables</summary>
+            <div>
+              <p>
+                Dades horàries d’ERA5-Land/Copernicus-ECMWF, obtingudes mitjançant
+                Open-Meteo per a Castalla (38,5964° N, 0,6722° O; 675 m) i agregades
+                en hora local. El període és 1950–2025.
+              </p>
+              <ul>
+                <li>Temperatura mitjana: mitjana de les 96 hores de cada interval.</li>
+                <li>Màxima diürna: màxim entre les 09.00 i les 20.59 h.</li>
+                <li>Mínima nocturna: mínim entre les 21.00 i les 08.59 h següents.</li>
+                <li>Temperatura aparent: mitjana de les 24 estimacions horàries.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Anàlisi estadística</summary>
+            <div>
+              <p>
+                Disseny emparellat per any. El contrast principal és una t de Student
+                bilateral sobre la diferència anual B − A, amb interval de confiança del
+                95 %. Les quatre variables es corregixen conjuntament amb el mètode de Holm.
+              </p>
+              <p>
+                La robustesa es va comprovar amb 100.000 remostrejos bootstrap BCa,
+                1.000.000 de permutacions de signe, Wilcoxon, prova dels signes,
+                Newey–West i bootstrap per blocs. Els llindars es van analitzar amb
+                McNemar exacte.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Projeccions 2027–2100</summary>
+            <div>
+              <p>
+                Projeccions CMIP6 regionalitzades a 5 km per AEMET/AdapteCCa amb
+                ESD-RegBA. Inclouen 11 models i els escenaris SSP1-2.6, SSP2-4.5,
+                SSP3-7.0 i SSP5-8.5.
+              </p>
+              <p>
+                Es va aplicar correcció QDM additiva preservant la tendència, calibrada
+                en 1985–2014. Les xifres mostrades són medianes entre climatologies de
+                models. La dispersió entre models no és un interval de confiança.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Què no podem concloure</summary>
+            <div>
+              <ul>
+                <li>ERA5-Land és una reanàlisi, no una sèrie instrumental local independent.</li>
+                <li>Una mitjana positiva no implica que B fora més calorós cada any.</li>
+                <li>La comparació descriu els intervals; no demostra una causa meteorològica.</li>
+                <li>Els anys futurs dels models no són pronòstics d’edicions concretes.</li>
+                <li>La hipòtesi estadística es va formalitzar després de veure els resums descriptius.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="sources">
+          <h3>Fonts</h3>
+          <a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land" target="_blank" rel="noreferrer">ERA5-Land · Copernicus Climate Data Store</a>
+          <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noreferrer">Open-Meteo · Historical Weather API</a>
+          <a href="https://www.aemet.es/es/serviciosclimaticos/cambio_climat/proyecciones-AR6" target="_blank" rel="noreferrer">AEMET · Projeccions climàtiques AR6</a>
+          <a href="https://escenarios.adaptecca.es/thredds/catalog/catalog.html" target="_blank" rel="noreferrer">AdapteCCa · Catàleg de dades</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Castalla · Anàlisi actualitzada el 24 de setembre de 2026</p>
+      <p>Les xifres es mostren arrodonides; els càlculs utilitzen la precisió completa.</p>
+    </footer>
+
+    <noscript>
+      <div class="noscript">Esta experiència necessita JavaScript per a mostrar els gràfics interactius.</div>
+    </noscript>
+  </body>
+</html>
