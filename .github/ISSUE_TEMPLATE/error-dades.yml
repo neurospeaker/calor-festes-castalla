@@ -1,0 +1,50 @@
+name: Correcció de dades o metodologia
+description: Comunica una possible errada en dades, càlculs, fonts o interpretació.
+title: "[Dades]: "
+labels: ["data", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gràcies per ajudar a millorar el rigor del projecte. No inclogues informació personal o confidencial.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Àrea afectada
+      options:
+        - Dades històriques
+        - Anàlisi estadística
+        - Projeccions climàtiques
+        - Visualització o text interpretatiu
+        - Fitxer Excel
+        - Una altra
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quina errada has detectat?
+      description: Indica la pàgina, secció, cel·la o resultat concret.
+      placeholder: Descriu què esperaves trobar i què mostra ara el projecte.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidència o font verificable
+      description: Afig enllaços, referències, càlculs reproduïbles o una captura.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Correcció proposada
+      description: Si la coneixes, explica la solució o el resultat correcte.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmació
+      options:
+        - label: He comprovat que no hi ha una issue oberta sobre el mateix problema.
+          required: true
+

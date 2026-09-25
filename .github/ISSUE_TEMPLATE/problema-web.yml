@@ -1,0 +1,37 @@
+name: Problema en la web
+description: Comunica un error de funcionament, visualització o accessibilitat.
+title: "[Web]: "
+labels: ["bug", "needs-review"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Què ha passat?
+      placeholder: Explica els passos, el resultat observat i el resultat esperat.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Adreça o secció
+      placeholder: https://neurospeaker.github.io/calor-festes-castalla/#...
+  - type: input
+    id: environment
+    attributes:
+      label: Dispositiu i navegador
+      placeholder: Per exemple, iPhone amb Safari 20
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Captures o informació addicional
+      description: Arrossega ací qualsevol captura que ajude a reproduir el problema.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmació
+      options:
+        - label: He comprovat que no hi ha una issue oberta sobre el mateix problema.
+          required: true
+

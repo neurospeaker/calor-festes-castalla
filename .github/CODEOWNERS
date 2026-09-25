@@ -1,0 +1,6 @@
+# Lorenzo Díaz Mataix revisa qualsevol canvi abans que arribe a la branca principal.
+* @neurospeaker
+
+# Protegix també la configuració de governança del repositori.
+/.github/ @neurospeaker
+

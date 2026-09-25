@@ -15,7 +15,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://neurospeaker.github.io/calor-festes-castalla/" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="La calor de les Festes de Castalla" />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:image" content="https://neurospeaker.github.io/calor-festes-castalla/assets/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Comparació dels calendaris A i B de les Festes de Castalla" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La calor de les Festes de Castalla" />
+    <meta name="twitter:description" content="Compara la calor de dos calendaris festius amb dades de 1950–2025 i projeccions fins a 2100." />
+    <meta name="twitter:image" content="https://neurospeaker.github.io/calor-festes-castalla/assets/social-preview.png" />
+    <meta name="twitter:image:alt" content="Comparació dels calendaris A i B de les Festes de Castalla" />
     <link rel="canonical" href="https://neurospeaker.github.io/calor-festes-castalla/" />
     <link
       rel="icon"
@@ -24,6 +34,12 @@
     />
     <title>La calor de les Festes de Castalla</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="f5988dae-4c8d-474e-802f-45b4089c9f03"
+      data-domains="neurospeaker.github.io"
+    ></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -434,33 +450,44 @@
               les projeccions. Els arxius conserven el contingut original i tenen
               noms estables per a poder-los citar i compartir.
             </p>
+            <div class="downloads-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/neurospeaker/calor-festes-castalla/archive/refs/heads/main.zip"
+                data-download="project-zip"
+              >Descarrega-ho tot (.zip)</a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/neurospeaker/calor-festes-castalla/releases/latest"
+              >Versió estable</a>
+            </div>
           </div>
 
           <div class="download-groups">
             <section class="download-group" aria-labelledby="downloads-historic-title">
               <h4 id="downloads-historic-title">Anàlisi històrica</h4>
               <div class="download-list">
-                <a class="download-item" href="descarregues/historic/01_comparacio_climatologica_1950_2025.xlsx" download>
+                <a class="download-item" href="descarregues/historic/01_comparacio_climatologica_1950_2025.xlsx" download data-download="01-comparacio-climatologica">
                   <span class="download-number">01</span>
                   <span class="download-copy"><strong>Comparació climatològica</strong><small>Sèrie anual i resum descriptiu · 1950–2025</small></span>
                   <span class="download-format">XLSX · 540 KB</span>
                 </a>
-                <a class="download-item" href="descarregues/historic/02_analisi_estadistica_1950_2025.xlsx" download>
+                <a class="download-item" href="descarregues/historic/02_analisi_estadistica_1950_2025.xlsx" download data-download="02-analisi-estadistica">
                   <span class="download-number">02</span>
                   <span class="download-copy"><strong>Anàlisi estadística</strong><small>Contrastos, intervals i proves de robustesa · 1950–2025</small></span>
                   <span class="download-format">XLSX · 56 KB</span>
                 </a>
-                <a class="download-item" href="descarregues/historic/03_analisi_estadistica_sense_solapament_1950_2025.xlsx" download>
+                <a class="download-item" href="descarregues/historic/03_analisi_estadistica_sense_solapament_1950_2025.xlsx" download data-download="03-analisi-sense-solapament">
                   <span class="download-number">03</span>
                   <span class="download-copy"><strong>Anàlisi sense solapament</strong><small>Els 43 anys en què A i B no compartixen cap dia</small></span>
                   <span class="download-format">XLSX · 52 KB</span>
                 </a>
-                <a class="download-item" href="descarregues/historic/04_canvi_recent_2020_2025_vs_1950_2025.xlsx" download>
+                <a class="download-item" href="descarregues/historic/04_canvi_recent_2020_2025_vs_1950_2025.xlsx" download data-download="04-canvi-recent">
                   <span class="download-number">04</span>
                   <span class="download-copy"><strong>Canvi recent</strong><small>2020–2025 en comparació amb la sèrie històrica</small></span>
                   <span class="download-format">XLSX · 52 KB</span>
                 </a>
-                <a class="download-item" href="descarregues/historic/05_ultims_10_anys_2016_2025_vs_1950_2025.xlsx" download>
+                <a class="download-item" href="descarregues/historic/05_ultims_10_anys_2016_2025_vs_1950_2025.xlsx" download data-download="05-ultims-deu-anys">
                   <span class="download-number">05</span>
                   <span class="download-copy"><strong>Últims deu anys</strong><small>2016–2025 en context històric</small></span>
                   <span class="download-format">XLSX · 44 KB</span>
@@ -471,12 +498,12 @@
             <section class="download-group" aria-labelledby="downloads-projections-title">
               <h4 id="downloads-projections-title">Projeccions climàtiques</h4>
               <div class="download-list">
-                <a class="download-item" href="descarregues/projeccions/06_projeccio_climatica_2027_2100.xlsx" download>
+                <a class="download-item" href="descarregues/projeccions/06_projeccio_climatica_2027_2100.xlsx" download data-download="06-projeccio-climatica">
                   <span class="download-number">06</span>
                   <span class="download-copy"><strong>Projecció 2027–2100</strong><small>11 models CMIP6 i quatre escenaris SSP</small></span>
                   <span class="download-format">XLSX · 1,2 MB</span>
                 </a>
-                <a class="download-item" href="descarregues/projeccions/07_projeccio_climatica_2027_2100_sense_solapament.xlsx" download>
+                <a class="download-item" href="descarregues/projeccions/07_projeccio_climatica_2027_2100_sense_solapament.xlsx" download data-download="07-projeccio-sense-solapament">
                   <span class="download-number">07</span>
                   <span class="download-copy"><strong>Projecció sense solapament</strong><small>Comparació futura restringida als calendaris separats</small></span>
                   <span class="download-format">XLSX · 824 KB</span>
@@ -505,8 +532,8 @@
     </main>
 
     <footer>
-      <p>Castalla · Anàlisi actualitzada el 25 de setembre de 2026</p>
-      <p>Les xifres es mostren arrodonides; els càlculs utilitzen la precisió completa.</p>
+      <p>Castalla · Anàlisi actualitzada el 25 de setembre de 2026 · <a href="https://github.com/neurospeaker/calor-festes-castalla">Codi i contribucions</a></p>
+      <p><a href="https://github.com/neurospeaker/calor-festes-castalla/blob/main/PRIVACY.md">Privacitat</a> · Les xifres es mostren arrodonides; els càlculs utilitzen la precisió completa.</p>
     </footer>
 
     <noscript>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neurospeaker.github.io/calor-festes-castalla/sitemap.xml
+
