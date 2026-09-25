@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Si utilitzeu este projecte, citeu-lo amb les dades següents."
+title: "La calor de les Festes de Castalla: comparació climàtica de dos calendaris festius, 1950–2100"
+type: dataset
+authors:
+  - family-names: "Díaz Mataix"
+    given-names: "Lorenzo"
+version: 1.0.0
+date-released: 2026-09-25
+url: "https://neurospeaker.github.io/calor-festes-castalla/"
+repository-code: "https://github.com/neurospeaker/calor-festes-castalla"
+abstract: >-
+  Comparació de la calor associada a dos calendaris possibles de les Festes de
+  Moros i Cristians de Castalla. Inclou una anàlisi històrica de 1950–2025 i
+  projeccions climàtiques de 2027–2100.

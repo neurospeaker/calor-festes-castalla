@@ -1496,6 +1496,122 @@ h3 {
   color: var(--text);
 }
 
+.downloads-panel {
+  scroll-margin-top: 88px;
+  margin-top: 38px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(73, 185, 255, 0.08), transparent 42%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.downloads-intro {
+  max-width: 760px;
+}
+
+.downloads-intro h3 {
+  margin: 7px 0 10px;
+  font-size: clamp(1.6rem, 4vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.downloads-intro > p:last-child,
+.downloads-note {
+  color: var(--muted);
+}
+
+.download-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.download-group h4 {
+  margin: 0 0 11px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.download-list {
+  display: grid;
+  gap: 9px;
+}
+
+.download-item {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  gap: 13px;
+  align-items: center;
+  min-height: 72px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(8, 17, 31, 0.55);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.download-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  background: rgba(15, 30, 51, 0.82);
+}
+
+.download-number {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(73, 185, 255, 0.3);
+  border-radius: 10px;
+  color: var(--blue);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.download-copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.download-copy strong {
+  font-size: 0.86rem;
+}
+
+.download-copy small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.download-format {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(73, 185, 255, 0.1);
+  color: var(--blue);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.downloads-note {
+  margin: 22px 0 0;
+  font-size: 0.74rem;
+}
+
+.downloads-note a {
+  color: var(--text);
+  font-weight: 800;
+}
+
 .authorship {
   margin-top: 30px;
   padding: 22px 24px;
@@ -1593,6 +1709,10 @@ footer p {
 
   .year-ribbon {
     grid-template-columns: repeat(13, minmax(0, 1fr));
+  }
+
+  .download-groups {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1736,6 +1856,15 @@ footer p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .download-item {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .download-format {
+    grid-column: 2;
+    justify-self: start;
+  }
+
   footer {
     display: block;
     width: calc(100% - 28px);
@@ -1748,6 +1877,10 @@ footer p {
 
 @media (max-width: 430px) {
   .section-nav a:first-child {
+    display: none;
+  }
+
+  .section-nav a:nth-child(2) {
     display: none;
   }
 
