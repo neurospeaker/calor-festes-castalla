@@ -1647,6 +1647,16 @@ h3 {
   color: var(--muted);
 }
 
+.scientific-reviewer {
+  display: inline;
+  padding: 0.08em 0.28em;
+  border-radius: 0.3em;
+  background: rgba(255, 211, 122, 0.18);
+  color: var(--text);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
