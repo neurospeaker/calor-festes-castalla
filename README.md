@@ -76,11 +76,11 @@ La metodologia completa i els límits d’interpretació es descriuen en la [web
 
 Les dades històriques corresponen a Castalla (38,5964° N, 0,6722° O; 675 m). ERA5-Land és una reanàlisi i no substituïx una sèrie instrumental local independent.
 
-## Autoria
+## Autoria i direcció científica
 
-**Lorenzo Díaz Mataix** — doctor en Neurociència i llicenciat en Farmàcia i Bioquímica.
+### Lorenzo Díaz-Mataix
 
-Anàlisi plantejada, dirigida i interpretada per Lorenzo Díaz Mataix. S’han utilitzat eines d’intel·ligència artificial com a suport per a la programació, la visualització i la comunicació dels resultats.
+Anàlisi plantejada, dirigida i interpretada per Lorenzo Díaz Mataix, doctor en Neurociència. L'anàlisi ha estat revisada per **Juan Javier Miró Pérez**, doctor en Geografia. S’han utilitzat eines d’intel·ligència artificial com a suport per a la programació, visualització i comunicació dels resultats.
 
 ## Com citar el projecte
 
